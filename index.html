@@ -1,11 +1,21 @@
-<button onclick="go()">立即参与</button>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
 
 <script>
-function go(){
-    window.open("https://u.jd.com/Rgi0rKV");
+const linkA = "https://u.jd.com/Rgi0rKV";
+const linkB = "http://3.cn/-2P5C48B";
 
-    setTimeout(()=>{
-        location.href="http://3.cn/-2P5C48B";
-    },5000);
+if(localStorage.getItem("jd_visit")){
+    location.replace(linkB);
+}else{
+    localStorage.setItem("jd_visit","1");
+    location.replace(linkA);
 }
 </script>
+
+</body>
+</html>
